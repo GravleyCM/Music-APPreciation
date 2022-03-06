@@ -3,7 +3,7 @@
 
 <section>
   <h1>All the Artists</h1>
-  <% if(!user) { %>
+  <% if(user) { %>
     <form action="/artists" method="POST">
       <label for="bandName">
         <input type="text" name="bandName">
