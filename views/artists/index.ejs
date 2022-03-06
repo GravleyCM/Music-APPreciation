@@ -1,7 +1,16 @@
 <%- include("../partials/html-head") %>
 <%- include("../partials/nav") %>
 
-
+<section>
+  <button>Add Artist</button><br />
+  <h1>All the Artists</h1>
+  <ul>
+  <% artists.forEach(artist => {
+    <li><%= artist.name %></li>
+    <li><%= artist.genre %></li>
+  <% }) %>
+  </ul>
+</section>
 
 
 <%- include("../partials/footer") %> 
