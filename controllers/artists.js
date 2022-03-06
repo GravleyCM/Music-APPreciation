@@ -29,6 +29,10 @@ function show(req, res) {
       title: `${artist.name}`
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.render(err)
+  })
 }
 
 export {
