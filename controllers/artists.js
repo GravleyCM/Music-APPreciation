@@ -17,9 +17,7 @@ function create(req, res) {
   .then(artist => {
     res.redirect("/artists")
   })
-  .catch(err => {
-    console.log(err)
-  })
+  .catch(err => console.log(err))
 }
 
 export {

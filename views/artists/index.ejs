@@ -5,13 +5,13 @@
   <h1>All the Artists</h1>
   <% if(user) { %>
     <form action="/artists" method="POST">
-      <label for="bandName">
+      <label for="bandName">Artist Name:
         <input type="text" name="bandName" placeholder="Artist name">
       </label>
-      <label for="genre">
+      <label for="genre"> Genre:
         <input type="text" name="genre" placeholder="Artist Genre">
       </label>
-      <button>Add Artist</button>
+      <button type="submit">Add Artist</button>
     </form>
   <% } %>  
   <ul>
