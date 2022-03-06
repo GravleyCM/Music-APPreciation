@@ -6,7 +6,7 @@ import { isLoggedIn } from "../middleware/middleware.js"
 const router = Router()
 
 router.get("/", artistsCtrl.index)
-router.post("/artists",  isLoggedIn, artistsCtrl.create)
+router.post("/",  isLoggedIn, artistsCtrl.create)
 
 
 export {
