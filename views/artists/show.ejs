@@ -1,0 +1,12 @@
+<%- include("../partials/html-head") %>
+<%- include("../partials/nav") %>
+
+<section>
+  <p>This is one of <%= artist.owner.name %>'s favorite artists.</p>
+  <h1><%= artist.name %> </h1>
+  <p>
+    <%= artist.bandName %> plays <%= artist.genre %> style music!
+  </p>
+</section>
+
+<%- include("../partials/footer") %>
