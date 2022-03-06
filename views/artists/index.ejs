@@ -17,7 +17,7 @@
   <ul>
   <% artists.forEach(artist => { %>
     <li>
-      <%= artist.bandName %> plays
+      <a href="/artists/<%= artist._id %>"><%= artist.bandName %></a> plays
       <%= artist.genre %> style music!
     </li>
   <% }) %>
