@@ -4,7 +4,7 @@ function index(req, res) {
   Artist.find({})
   .then(artists => {
     res.render("artists/index", {
-      name,
+      artists,
       title: "All Artists"
     })
   })
