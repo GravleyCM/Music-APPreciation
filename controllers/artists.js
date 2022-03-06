@@ -26,7 +26,7 @@ function show(req, res) {
   .then(artist => {
     res.render("artists/show", {
       artist,
-      title: `${artist.name}`
+      title: `${artist.bandName}`
     })
   })
   .catch(err => {

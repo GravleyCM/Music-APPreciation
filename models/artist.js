@@ -5,6 +5,10 @@ const Schema = mongoose.Schema
 const artistSchema = new Schema ({
   bandName: String,
   genre: String,
+  owner: {
+    type: Schema.Types.ObjectId,
+    "ref": "Profile"
+  },
   // album: [albumSchema],
 })
 
