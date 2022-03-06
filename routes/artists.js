@@ -7,6 +7,7 @@ const router = Router()
 
 router.get("/", artistsCtrl.index)
 router.post("/",  isLoggedIn, artistsCtrl.create)
+router.get("/:id", artistsCtrl.show)
 
 
 export {
