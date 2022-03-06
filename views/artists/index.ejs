@@ -16,8 +16,10 @@
   <% } %>  
   <ul>
   <% artists.forEach(artist => { %>
-    <li><%= artist.bandName %></li>
-    <li><%= artist.genre %></li>
+    <li>
+      <%= artist.bandName %> plays
+      <%= artist.genre %> style music!
+    </li>
   <% }) %>
   </ul>
 </section>
