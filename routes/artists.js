@@ -4,7 +4,7 @@ import * as artistsCtrl from "../controllers/artists.js"
 
 const router = Router()
 
-router.get("/", artistaCtrl.index)
+router.get("/", artistsCtrl.index)
 
 
 export {

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const artistSchema = new Schema ({
   name: String,
   genre: String,
-  album: [albumSchema],
+  // album: [albumSchema],
 })
 
 const Artist = mongoose.model("Artist", artistSchema)
