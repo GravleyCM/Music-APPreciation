@@ -20,7 +20,19 @@ function create(req, res) {
   .catch(err => console.log(err))
 }
 
+function show(req, res) {
+  Artist.findById(req.params.id)
+  .populate("owner")
+  .then(artist => {
+    res.render("artists/show", {
+      artist,
+      title: `${artist.name}`
+    })
+  })
+}
+
 export {
   index,
   create,
+  show,
 }
