@@ -2,8 +2,18 @@
 <%- include("../partials/nav") %>
 
 <section>
-  <button>Add Artist</button><br />
   <h1>All the Artists</h1>
+  <% if(!user) { %>
+    <form action="/artists" method="POST">
+      <label for="bandName">
+        <input type="text" name="bandName">
+      </label>
+      <label for="genre">
+        <input type="text" name="genre">
+      </label>
+      <button>Add Artist</button>
+    </form>
+  <% } %>  
   <ul>
   <% artists.forEach(artist => { %>
     <li><%= artist.bandName %></li>
