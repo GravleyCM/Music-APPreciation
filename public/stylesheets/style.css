@@ -49,3 +49,7 @@ h1 {
 ul {
   list-style: none;
 }
+
+a {
+  margin: 0 5px;
+}
