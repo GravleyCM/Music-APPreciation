@@ -17,7 +17,7 @@ const artistSchema = new Schema ({
   owner: {
     type: Schema.Types.ObjectId, "ref": "Profile"
   },
-  album: [albumSchema],
+  albums: [albumSchema],
   song: {
     type: Schema.Types.ObjectId, "ref": "Song"
   }
