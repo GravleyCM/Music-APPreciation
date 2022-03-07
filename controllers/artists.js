@@ -35,8 +35,13 @@ function show(req, res) {
   })
 }
 
+function addAlbum(req, res) {
+  res.render("/artists")
+}
+
 export {
   index,
   create,
   show,
+  addAlbum,
 }
