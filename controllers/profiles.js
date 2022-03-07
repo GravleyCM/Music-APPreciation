@@ -1,16 +1,17 @@
 import { Profile } from "../models/profile.js"
 
 function index(req, res) {
-  Profile.find(modelQuery)
-    .sort("name")
-    .exec(function (err, profiles) {
-      if (err) return next(err)
-      res.render("profiles/index", { 
-        profiles, 
-        name: req.query.name,
-        user: req.user
-      })
+  Profile.find({})
+  .then(profiles => {
+    res.render("profiles/index",  {
+      profiles,
+      title: "User Profiles"
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.render(err)
+  })
 }
 
 export {
