@@ -18,6 +18,9 @@ const artistSchema = new Schema ({
     type: Schema.Types.ObjectId, "ref": "Profile"
   },
   album: [albumSchema],
+  song: {
+    type: Schema.Types.ObjectId, "ref": "Song"
+  }
 }, {
   timestamps: true
 })
