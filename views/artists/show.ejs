@@ -7,16 +7,22 @@
     <%= artist.bandName %> plays <%= artist.genre %> music!
   </p>
   <% if(user) { %>
-    <form action="/artists/show" method="POST">
-      <label for="album">Album Name:
+    <h2>Add An Album</h2>
+    <form action="/artists/<%= artist._id %>/albums" method="POST">
+      <label for="">
         <input type="text" name="album" placeholder="Artist Album">
       </label>
       <button type="submit">Add Album</button>
     </form>
   <% } %>
-  <form action="">
-    
-  </form>
+
+
+    <% artist.album.forEach(album => { %>
+      <h3>
+        <%= artist.album.albumName %>
+      </h3>
+    <% }) %>
+
 </section>
 
 <%- include("../partials/footer") %>
