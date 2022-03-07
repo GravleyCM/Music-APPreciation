@@ -36,7 +36,15 @@ function show(req, res) {
 }
 
 function addAlbum(req, res) {
-  
+  Artist.findById(req.artist._id)
+  .then(artist => {
+    artist.albums.push(req.body)
+    artist.save()
+    .then(() => {
+      res.redirect(`/artists/${req.artist._id}`)
+    })
+  })
+  .catch(err => console.log(err))
 }
 
 export {
