@@ -10,7 +10,19 @@
         alt="<%= user.profile.name %> avatar"
       />
     </div>
-  <% } %>
+    <h1>Profiles</h1>
+    <div class="container">
+      <% users.forEach(function(profile) { %>
+        <% if (profile.avatar) { %>
+          <img 
+            src="<%= profile.avatar %>" 
+            alt="<%= profile.name %> profile"
+            class="img-fluid rounded-start"
+          />
+        <% }%>
+    </div>
+  <% }) %>
+  <% } %> 
 </main>
 
 <%- include('./partials/footer') %>
