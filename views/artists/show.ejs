@@ -10,7 +10,7 @@
     <h2>Add An Album</h2>
     <form action="/artists/<%= artist._id %>/albums" method="POST">
       <label for="">
-        <input type="text" name="album" placeholder="Artist Album">
+        <input type="text" name="albumName" placeholder="Artist Album">
       </label>
       <button type="submit">Add Album</button>
     </form>
@@ -19,7 +19,7 @@
 
     <% artist.albums.forEach(album => { %>
       <h3>
-        <%= artist.album.albumName %>
+        <%= album.albumName %>
       </h3>
     <% }) %>
 

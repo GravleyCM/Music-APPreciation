@@ -13,6 +13,7 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
+  console.log(req.body);
   Artist.create(req.body)
   .then(artist => {
     res.redirect("/artists")
@@ -36,13 +37,14 @@ function show(req, res) {
 }
 
 function addAlbum(req, res) {
-  Artist.findById(req.params._id)
+  console.log(req.params.id)
+  Artist.findById(req.params.id)
   .then(artist => {
-    console.log("XXXXXXXX", req.body)
+    console.log("XXXXXXXX", artist)
     artist.albums.push(req.body)
     artist.save()
     .then(() => {
-      res.redirect(`/artists/${req.artist._id}`)
+      res.redirect(`/artists/${req.params.id}`)
     })
   })
   .catch(err => console.log(err))
