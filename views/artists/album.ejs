@@ -3,4 +3,16 @@
 
 <h1>Song List</h1>
 
+<% if(user) { %>
+  <h2>Add A Song</h2>
+  <form action="" method="POST">
+    <label>
+      <input type="text" name="songTitle" placeholder="Song Title">
+    </label>
+    <button type="submit">Add Song</button>
+  </form>
+<% } %>
+
+</section>
+
 <%- include("../partials/footer") %>

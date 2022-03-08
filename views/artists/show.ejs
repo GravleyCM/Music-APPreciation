@@ -14,7 +14,7 @@
   <% if(user) { %>
     <h2>Add An Album</h2>
     <form action="/artists/<%= artist._id %>/albums" method="POST">
-      <label for="">
+      <label>
         <input type="text" name="albumName" placeholder="Artist Album">
       </label>
       <button type="submit">Add Album</button>
