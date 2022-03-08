@@ -36,8 +36,9 @@ function show(req, res) {
 }
 
 function addAlbum(req, res) {
-  Artist.findById(req.artist._id)
+  Artist.findById(req.params._id)
   .then(artist => {
+    console.log("XXXXXXXX", req.body)
     artist.albums.push(req.body)
     artist.save()
     .then(() => {
