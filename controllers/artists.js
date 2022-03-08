@@ -55,7 +55,7 @@ function addAlbum(req, res) {
 }
 
 function showSongs(req, res) {
-  
+  console.log("Go to Songs")
 }
 
 export {
@@ -64,4 +64,5 @@ export {
   show,
   deleteArtist as delete,
   addAlbum,
+  showSongs
 }
