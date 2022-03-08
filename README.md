@@ -1,4 +1,7 @@
- ## Music APPreciation
+## Music APPreciation
+
+### About
+Music APPreciation is an app where users can add musical artists, albums, and songs to share with eachother. Users will be able to have a personal profile so they can have favorite artists and show off their own personal music tastes.
 
 ### Getting Started
 (Link to deployed site will go here)
