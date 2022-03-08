@@ -5,7 +5,9 @@
 
 
 ## Screenshots
+![Initial wireframe](public/assets/Screen%20Shot%202022-03-03%20at%209.41.13%20PM.png)
 
+![Inital ERD](public/assets/Screen%20Shot%202022-03-04%20at%2011.06.12%20AM.png)
 
 ## Technologies Used
 * Node.js
