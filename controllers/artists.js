@@ -37,7 +37,16 @@ function show(req, res) {
 }
 
 function deleteArtist(req, res) {
-
+  Artist.findByIdAndDelete(req.params.id)
+  .then(artist => {
+    if (artist.owner.equals(req.user.profile_id)) {
+      artist.delete()
+      .then(() => {
+        res.redirect("/artists")
+      })
+    }
+  })
+  .catch(err => console.log(err))
 }
 
 function addAlbum(req, res) {
