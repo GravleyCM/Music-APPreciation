@@ -50,10 +50,8 @@ function deleteArtist(req, res) {
 }
 
 function addAlbum(req, res) {
-  console.log(req.params.id)
   Artist.findById(req.params.id)
   .then(artist => {
-    console.log("XXXXXXXX", artist)
     artist.albums.push(req.body)
     artist.save()
     .then(() => {
