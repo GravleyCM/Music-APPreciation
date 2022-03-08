@@ -10,7 +10,7 @@ router.post("/",  isLoggedIn, artistsCtrl.create)
 router.get("/:id", artistsCtrl.show)
 router.post("/:id/albums", isLoggedIn, artistsCtrl.addAlbum)
 router.delete("/:id", isLoggedIn, artistsCtrl.delete)
-router.get("/:id/songs", artistsCtrl.showSongs)
+router.get("/:id/album/:id", artistsCtrl.showSongs)
 
 
 export {

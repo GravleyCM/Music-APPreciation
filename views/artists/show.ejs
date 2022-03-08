@@ -24,7 +24,7 @@
 
     <% artist.albums.forEach(album => { %>
       <h3>
-        <a href="/artists/<%= artist._id %>/<%= album._id %>/songs"><%= album.albumName %></a>
+        <a href="/artists/<%= artist._id %>/album/<%= album._id %>"><%= album.albumName %></a>
       </h3>
     <% }) %>
 

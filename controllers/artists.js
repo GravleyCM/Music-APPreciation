@@ -56,8 +56,8 @@ function addAlbum(req, res) {
 
 function showSongs(req, res) {
   console.log("Go to Songs")
-  res.render("artists/:id/songs", {
-    album,
+  res.render("artists/:id/album/:id", {
+    // album,
     title: "Song List"
   })
 }
