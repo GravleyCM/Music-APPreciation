@@ -6,6 +6,11 @@
   <p>
     <%= artist.bandName %> plays <%= artist.genre %> music!
   </p>
+  
+  <form action="/artists/<%= artist.id %>?_method=DELETE" method="POST">
+    <button>Delete Artist</button>
+  </form>
+
   <% if(user) { %>
     <h2>Add An Album</h2>
     <form action="/artists/<%= artist._id %>/albums" method="POST">
