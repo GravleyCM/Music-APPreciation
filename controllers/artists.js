@@ -56,6 +56,10 @@ function addAlbum(req, res) {
 
 function showSongs(req, res) {
   console.log("Go to Songs")
+  res.render("artists/songs", {
+    album,
+    title: "Song List"
+  })
 }
 
 export {
