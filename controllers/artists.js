@@ -54,7 +54,9 @@ function addAlbum(req, res) {
   .catch(err => console.log(err))
 }
 
-
+function showSongs(req, res) {
+  
+}
 
 export {
   index,
