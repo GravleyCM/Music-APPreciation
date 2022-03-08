@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 
 const albumSchema = new Schema ({
   albumName: String,
-  songs: {
+  songs: [{
     type: Schema.Types.ObjectId, "ref": "Song"
-  },
+  }],
 }, {
   timestamps: true
 })
@@ -18,9 +18,9 @@ const artistSchema = new Schema ({
     type: Schema.Types.ObjectId, "ref": "Profile"
   },
   albums: [albumSchema],
-  songs: {
+  songs: [{
     type: Schema.Types.ObjectId, "ref": "Song"
-  }
+  }]
 }, {
   timestamps: true
 })

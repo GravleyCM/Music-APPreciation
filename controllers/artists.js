@@ -13,7 +13,6 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  console.log(req.body);
   Artist.create(req.body)
   .then(artist => {
     res.redirect("/artists")
