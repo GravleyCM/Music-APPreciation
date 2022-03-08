@@ -36,6 +36,10 @@ function show(req, res) {
   })
 }
 
+function deleteArtist(req, res) {
+
+}
+
 function addAlbum(req, res) {
   console.log(req.params.id)
   Artist.findById(req.params.id)
@@ -54,5 +58,6 @@ export {
   index,
   create,
   show,
+  deleteArtist as delete,
   addAlbum,
 }
