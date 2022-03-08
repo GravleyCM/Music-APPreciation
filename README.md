@@ -12,6 +12,10 @@ Music APPreciation is an app where users can add musical artists, albums, and so
 
 ![Inital ERD](public/assets/Screen%20Shot%202022-03-04%20at%2011.06.12%20AM.png)
 
+![Index View](public/assets/Index%20View.png)
+
+![Artist View](public/assets/Artist%20View.png)
+
 ## Technologies Used
 * Node.js
 * MongoDB
