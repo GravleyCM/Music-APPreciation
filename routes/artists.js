@@ -9,6 +9,7 @@ router.get("/", artistsCtrl.index)
 router.post("/",  isLoggedIn, artistsCtrl.create)
 router.get("/:id", artistsCtrl.show)
 router.post("/:id/albums", artistsCtrl.addAlbum)
+router.delete("/:id", artistsCtrl.delete)
 
 
 export {
