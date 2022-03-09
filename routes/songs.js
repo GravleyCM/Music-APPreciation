@@ -4,7 +4,7 @@ import * as songsCtrl from "../controllers/songs.js"
 
 const router = Router()
 
-router.post("/songs", isLoggedIn, songsCtrl.addSong)
+router.post(":id/songs", isLoggedIn, songsCtrl.addSong)
 
 
 export {
