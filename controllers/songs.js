@@ -1,4 +1,5 @@
 import { Song } from "../models/song.js"
+import { Artist } from "../models/artist.js"
 
 function index(req, res) {
   Song.find({})
@@ -12,12 +13,16 @@ function index(req, res) {
 }
 
 function addSong(res, req) {
-  console.log("X!X!X!X!", req.body)
-  // Song.create(req.body)
-  // .then(song => {
-  //   res.render("artists/album")
-  // })
-  // .catch(err => console.log(err))
+  console.log("X!X!X!X!", req.params.id)
+  Artist.findById(req.params.id)
+  .then(album => {
+    album.songs.push(req.body)
+    album.save()
+    .then(() => {
+      res.redirect(`/artists/${req.params.id}`)
+    })
+  })
+  .catch(err => console.log(err))
 }
 
 export {
