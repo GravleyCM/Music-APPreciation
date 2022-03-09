@@ -2,13 +2,14 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Edit Artist 🌮</h1>
-  <form action="/artists/<%= artists._id %>?_method=PUT" method="POST">
+  <h1>Edit Artist</h1>
+  <form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
     <label>
+      Artist Name:
       <input 
         type="text"
         name="bandName" 
-        value="<%= artists.bandName %>" 
+        value="<%= artist.bandName %>" 
       >
     </label>
     <button type="submit">Edit Artist</button>
