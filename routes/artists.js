@@ -6,7 +6,7 @@ import { isLoggedIn } from "../middleware/middleware.js"
 const router = Router()
 
 router.get("/", artistsCtrl.index)
-router.post("/",  isLoggedIn, artistsCtrl.create)
+router.post("/", isLoggedIn, artistsCtrl.create)
 router.get("/:id", artistsCtrl.show)
 router.post("/:id/albums", isLoggedIn, artistsCtrl.addAlbum)
 router.delete("/:id", isLoggedIn, artistsCtrl.delete)
