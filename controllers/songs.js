@@ -56,5 +56,5 @@ Artist.findById(req.params.id)
 export {
   index,
   createSong,
-  // addSong
+  addSong
 }
