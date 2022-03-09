@@ -24,6 +24,7 @@ function index(req, res) {
 function createSong(req, res) {
   Song.create(req.body)
   .then(song => {
+    console.log(req.body)
     res.redirect("/artists/songs")
   })
   .catch(err => console.log(err))
