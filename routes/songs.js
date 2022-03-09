@@ -6,7 +6,7 @@ const router = Router()
 
 router.get("/", songsCtrl.index)
 router.post("/", isLoggedIn, songsCtrl.createSong)
-router.post("artist/:id/album/:id", isLoggedIn, songsCtrl.addSong)
+// router.post("/", isLoggedIn, songsCtrl.addSong)
 
 
 

@@ -21,16 +21,16 @@ function createSong(req, res) {
   .catch(err => console.log(err))
 }
 
-function addSong(req, res)  {
-Artist.findById(req.params.id)
-.then(artist=> {
-  console.log(artist)
-})
-  // .then(() => {
-  //   console.log("X!X!X!X!X!X!!X!X", req.params.id)
-  //   res.redirect("artists/songs")
-  // })
-}
+// function addSong(req, res)  {
+// Artist.findById(req.params.id)
+// .then(artist=> {
+//   console.log(req.params.id)
+// })
+//   // .then(() => {
+//   //   console.log("X!X!X!X!X!X!!X!X", req.params.id)
+//   //   res.redirect("artists/songs")
+//   // })
+// }
 // function addAlbum(req, res) {
 //   Artist.findById(req.params.id)
 //   .then(artist => {
@@ -59,5 +59,5 @@ Artist.findById(req.params.id)
 export {
   index,
   createSong,
-  addSong
+  // addSong
 }
