@@ -59,11 +59,21 @@ function showSongs(req, res) {
   })
 }
 
+function addSong(req, res)  {
+  Artist.findById(req.params.id)
+  .then(artist => {
+    artist.albums.songs.push(req.body.songId)
+    artist.save()
+  .then(() => res.redirect(`/artists/${req.params.id}`))
+  })
+}
+
 export {
   index,
   create,
   show,
   deleteArtist as delete,
   addAlbum,
-  showSongs
+  showSongs,
+  addSong
 }
