@@ -5,7 +5,7 @@
 
 <% if(user) { %>
   <h2>Add A Song</h2>
-  <form action=":id" method="POST">
+  <form action="/artists/:id/album/:id" method="POST">
     <label>
       <input type="text" name="songTitle" placeholder="Song Title">
     </label>
