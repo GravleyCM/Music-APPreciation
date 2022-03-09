@@ -54,7 +54,7 @@ function addAlbum(req, res) {
 }
 
 function showSongs(req, res) {
-  res.render("artists/album", {
+  res.render("artists/songs", {
     title: "Song List"
   })
 }
