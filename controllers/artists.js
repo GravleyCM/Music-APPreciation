@@ -68,6 +68,20 @@ function addSong(req, res)  {
   })
 }
 
+function edit(req, res) {
+  Artist.findById(req.params.id)
+  .then(artist => {
+    res.render('artists/edit', {
+      artist,
+      title: "Edit Artist"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/artists')
+  })
+}
+
 export {
   index,
   create,
@@ -75,5 +89,6 @@ export {
   deleteArtist as delete,
   addAlbum,
   showSongs,
-  addSong
+  addSong,
+  edit,
 }

@@ -1,0 +1,18 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit Artist 🌮</h1>
+  <form action="/artists/<%= artists._id %>?_method=PUT" method="POST">
+    <label>
+      <input 
+        type="text"
+        name="bandName" 
+        value="<%= artists.bandName %>" 
+      >
+    </label>
+    <button type="submit">Edit Artist</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

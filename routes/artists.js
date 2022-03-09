@@ -13,6 +13,8 @@ router.post("/:id/albums", isLoggedIn, artistsCtrl.addAlbum)
 router.delete("/:id", isLoggedIn, artistsCtrl.delete)
 router.get("/:id/album/:id", artistsCtrl.showSongs)
 router.post("/:id/songs", artistsCtrl.addSong)
+router.get('artists/:id/edit', isLoggedIn, artistsCtrl.edit)
+
 
 
 
