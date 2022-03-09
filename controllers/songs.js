@@ -24,10 +24,13 @@ function index(req, res) {
 function createSong(req, res) {
   Song.create(req.body)
   .then(song => {
-    console.log("SONG TEST", song)
     res.redirect("/artists/songs")
   })
   .catch(err => console.log(err))
+}
+
+function addSong(req, res)  {
+
 }
 
 // function addAlbum(req, res) {
