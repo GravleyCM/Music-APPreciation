@@ -30,10 +30,9 @@ function createSong(req, res) {
 }
 
 function addSong(req, res)  {
-Artist.findById(req.params.id)
-.then(artist => {
-  artist.album.song.push(req.body)
-  artist.save()
+Song.findById(req.params.id)
+.then(song => {
+  Artist.albums.findById(req.params.id)
   .then(() => {
     res.redirect("artists/songs")
   })

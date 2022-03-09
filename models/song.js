@@ -4,9 +4,6 @@ const Schema = mongoose.Schema
 
 const songSchema = new Schema ({
   songTitle: String,
-  reviews: {
-    type: Schema.Types.ObjectId, "ref": "Review"
-  }
 }, {
   timestamps: true
 })
