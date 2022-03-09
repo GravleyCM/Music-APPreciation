@@ -13,15 +13,17 @@ function index(req, res) {
 }
 
 function addSong(res, req) {
-  console.log("X!X!X!X!", req.params.id)
-  Artist.findById(req.params.id)
-  .then(album => {
-    album.songs.push(req.body)
-    album.save()
+  // console.log("X!X!X!X!", req.body)
+  Song.findById(req.params.id)
+  // .then(album => {
+  //   console.log(req.body)
+  //   album.songs.push(req.body)
+  //   album.save()
     .then(() => {
+      console.log("TEST")
       res.redirect(`/artists/${req.params.id}`)
     })
-  })
+  // })
   .catch(err => console.log(err))
 }
 
