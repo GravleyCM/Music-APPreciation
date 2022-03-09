@@ -82,6 +82,24 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Artist.findById(req.params.id)
+  .then(artist => {
+    if (artist.owner.equals(req.user.profile._id)) {
+      artist.updateOne(req.body, {new: true})
+      .then(()=> {
+        res.redirect(`/artists/${artist._id}`)
+      })
+    } else {
+      throw new Error ('Not correct user')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/artists`)
+  })
+}
+
 export {
   index,
   create,
@@ -91,4 +109,5 @@ export {
   showSongs,
   addSong,
   edit,
+  update,
 }
