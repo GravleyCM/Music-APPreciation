@@ -36,9 +36,11 @@ function show(req, res) {
 }
 
 function deleteArtist(req, res) {
-  Artist.findByIdAndDelete(req.params.id, function(err, artist) {
-  res.redirect("/artists")
+  Artist.findByIdAndDelete(req.params.id)
+  .then(() =>  {
+    res.redirect("/artists")
   })
+  .catch(err => console.log(err))
 }
 
 function addAlbum(req, res) {
