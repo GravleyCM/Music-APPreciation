@@ -24,14 +24,15 @@ function index(req, res) {
 function createSong(req, res) {
   Song.create(req.body)
   .then(song => {
-    console.log(req.body)
-    res.redirect("/artists/songs")
+    console.log(typeof(req.body))
+    res.redirect("/artists")
   })
   .catch(err => console.log(err))
 }
 
 function addSong(req, res)  {
 Song.findById(req.params.id)
+
 .then(song => {
   Artist.albums.findById(req.params.id)
   .then(() => {
