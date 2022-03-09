@@ -30,7 +30,15 @@ function createSong(req, res) {
 }
 
 function addSong(req, res)  {
-
+Artist.findById(req.params.id)
+.then(artist => {
+  artist.album.song.push(req.body)
+  artist.save()
+  .then(() => {
+    res.redirect("artists/songs")
+  })
+})
+.catch(err => console.log(err))
 }
 
 // function addAlbum(req, res) {
