@@ -12,11 +12,22 @@ function index(req, res) {
   .catch(err => console.log(err))
 }
 
+// function createSong(req, res) {
+//   Song.create(req.body)
+//   .then(song => {
+//     // console.log(typeof(req.body))
+//     res.redirect("/artists")
+//   })
+//   .catch(err => console.log(err))
+// }
+
 function createSong(req, res) {
-  Song.create(req.body)
-  .then(song => {
-    // console.log(typeof(req.body))
-    res.redirect("/artists")
+  console.log(req.body)
+  Artist.findById(req.params.id)
+  .then(artist => {
+    console.log("LINE 28", artist)
+    // artist.albums.songs.push(req.body)
+    artist.save()
   })
   .catch(err => console.log(err))
 }
