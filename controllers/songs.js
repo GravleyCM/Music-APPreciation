@@ -12,18 +12,20 @@ function index(req, res) {
   .catch(err => console.log(err))
 }
 
-function addSong(req, res) {
-  // console.log("X!X!X!X!", req.body)
-  Song.findById(req.body)
-  // .then(album => {
-  //   console.log(req.body)
-  //   album.songs.push(req.body)
-  //   album.save()
-    .then(() => {
-      console.log("TEST")
-      res.redirect("artists/songs")
-    })
-  // })
+// function create(req, res) {
+//   req.body.owner = req.user.profile._id
+//   Artist.create(req.body)
+//   .then(artist => {
+//     res.redirect("/artists")
+//   })
+//   .catch(err => console.log(err))
+// }
+
+function createSong(req, res) {
+  Song.create(req.body)
+  .then(song => {
+    res.redirect("/artists/songs")
+  })
   .catch(err => console.log(err))
 }
 
@@ -41,5 +43,6 @@ function addSong(req, res) {
 
 export {
   index,
-  addSong
+  createSong,
+  // addSong
 }
