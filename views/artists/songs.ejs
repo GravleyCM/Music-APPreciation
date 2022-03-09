@@ -5,7 +5,7 @@
 
 <% if(user) { %>
   <h2>Add A Song</h2>
-  <form action="artists/show" method="POST">
+  <form action="/songs" method="POST">
     <label>
       <input type="text" name="songTitle" placeholder="Song Title">
     </label>
@@ -13,11 +13,11 @@
   </form>
 <% } %>
 
-<% songs.forEach(song => { %>
+<!-- <%# songs.forEach(song => { %>
   <li>
-    <%= song.songTitle %>
-<% }) %>
-</ul>
+    <%# song.songTitle %>
+<%# }) %>
+</ul> -->
 
 </section>
 
