@@ -8,18 +8,18 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
     <% if (isSelf) { %>
       <h2>Add Your favorite Artist</h2>
-      <form action="/profiles/<%= profile._id %>/favartist" method="POST">
-
+    
         <ul>
           <%- profile.favArtist.map(fa => `<li>${fa.bandName}</li>`).join("") %> 
         </ul>
 
-      <label>Favorite Artist
-        <select>
-          <%- profile.favArtist.map(art => `<option value="${art._id}">${art.bandName}</option>`).join("") %>
-        </select>
-      </label>
-      <button>Add Favorite Artist</button>
+      <form action="/profiles/<%= profile._id %>/favartist" method="POST">
+        <label>Favorite Artist
+          <select>
+            <%- profile.favArtist.map(art => `<option value="${art._id}">${art.bandName}</option>`).join("") %>
+          </select>
+        </label>
+        <button>Add Favorite Artist</button>
       </form>
     <% } %>  
 
