@@ -8,6 +8,13 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
     <% if (isSelf) { %>
       <h2>Add Your favorite Artist</h2>
+      <form action="/profiles/<%= profile._id %>/favartist" method="POST">
+      <label>Favorite Artist
+        <select>
+          
+        </select>
+      </label>
+      </form>
     <% } %>  
 
 </main>

@@ -31,7 +31,12 @@ function show(req, res) {
   .catch((err) => console.log(err))
 }
 
+function addFavArtist(req, res) {
+
+}
+
 export {
   index,
   show,
+  addFavArtist,
 }
