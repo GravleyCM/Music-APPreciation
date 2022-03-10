@@ -11,7 +11,9 @@
       <form action="/profiles/<%= profile._id %>/favartist" method="POST">
       <label>Favorite Artist
         <select>
-          
+          <% artists.forEach(artist => { %>
+            <option><%= artist.bandName %></option>
+          <% }) %>
         </select>
       </label>
       </form>

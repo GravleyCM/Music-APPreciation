@@ -33,7 +33,12 @@ function show(req, res) {
 }
 
 function addFavArtist(req, res) {
-  per
+  Profile.findById(req.user.profile._id)
+  .then(profile =>  {
+    profile.favArtist.push(req.body)
+    profile.save()
+    .then(() => res.redirect(`/profiles/${req.user.profile._id}`))
+  })
 }
 
 export {
