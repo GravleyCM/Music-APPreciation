@@ -15,36 +15,22 @@ function index(req, res) {
   })
 }
 
-// function show(req, res) {
-//   Profile.findById(req.params.id)
-//   .then((profile) => {
-//     Profile.findById(req.user.profile._id)
-//     .then(self => {
-//       const isSelf = self._id.equals(profile._id)
-//       res.render("profiles/show", {
-//         title: `${profile.name}'s profile`,
-//         profile,
-//         artists,
-//         self,
-//         isSelf,
-//       })
-//     })
-//   })
-//   .catch((err) => console.log(err))
-// }
 function show(req, res) {
-  Proofile.findById(req.params.id)
-  .populate("artist")
-  .exec(function(err, profile) {
-    Artist.find({_id: {$nin: profile.artist}}, function(err, artists) {
-      console.log(err)
-      res.render('profiles/show', {
-        title: `${profile.name}'s profile`, 
+  Profile.findById(req.params.id)
+  .populate("favArtist")
+  .then((profile) => {
+    Profile.findById(req.user.profile._id)
+    .then(self => {
+      const isSelf = self._id.equals(profile._id)
+      res.render("profiles/show", {
+        title: `${profile.name}'s profile`,
         profile,
-        artists,
+        self,
+        isSelf,
       })
     })
   })
+  .catch((err) => console.log(err))
 }
 
 function addFavArtist(req, res) {
