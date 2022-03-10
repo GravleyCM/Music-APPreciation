@@ -26,6 +26,6 @@ Music APPreciation is an app where users can add musical artists, albums, and so
 
 
 ## Next Steps 
-Add tooltip for each input\
-Display an error if any inputs are left blank\
-Emphasize the inputs on each story
+Ability to rate and review artists, ablums, and songs.\
+Lyrics will be available to be read on song pages.\
+A playlist can be built on your profile.
