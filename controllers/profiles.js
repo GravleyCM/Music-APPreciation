@@ -1,4 +1,5 @@
 import { Profile } from "../models/profile.js"
+import { Artist } from "../models/artist.js"
 
 function index(req, res) {
   Profile.find({})
@@ -32,7 +33,7 @@ function show(req, res) {
 }
 
 function addFavArtist(req, res) {
-
+  per
 }
 
 export {
