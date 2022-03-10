@@ -18,16 +18,24 @@ function show(req, res) {
   Profile.findById(req.params.id)
   .populate("favArtist")
   .then((profile) => {
-    Profile.findById(req.user.profile._id)
-    .then(self => {
-      const isSelf = self._id.equals(profile._id)
-      res.render("profiles/show", {
-        title: `${profile.name}'s profile`,
-        profile,
-        self,
-        isSelf,
+    Artist.find({})
+    .then(artists => {
+      console.log(artists)
+      Profile.findById(req.user.profile._id)
+      .then(self => {
+        const isSelf = self._id.equals(profile._id)
+        res.render("profiles/show", {
+          title: `${profile.name}'s profile`,
+          profile,
+          artists,
+          self,
+          isSelf,
+        })
       })
     })
+    .catch(err => console.log(err))
+    console.log(profile)
+    
   })
   .catch((err) => console.log(err))
 }

@@ -17,7 +17,7 @@
       <form action="/profiles/<%= profile._id %>" method="POST">
         <label>Favorite Artist
           <select>
-            <%- profile.favArtist.map(art => `<option value="${art._id}">${art.bandName}</option>`).join("") %>
+            <%= artists.forEach(art => `<option value="${art._id}">${art.bandName}</option>`) %>
           </select>
         </label>
         <button>Add Favorite Artist</button>
