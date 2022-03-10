@@ -12,7 +12,10 @@ const albumSchema = new Schema ({
 })
 
 const artistSchema = new Schema ({
-  bandName: String,
+  bandName: {
+    type: String,
+    unique: true,
+  },
   genre: String,
   owner: {
     type: Schema.Types.ObjectId, ref: "Profile"
