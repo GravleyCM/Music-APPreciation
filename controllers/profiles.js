@@ -20,7 +20,6 @@ function show(req, res) {
   .then((profile) => {
     Artist.find({})
     .then(artists => {
-      console.log(artists)
       Profile.findById(req.user.profile._id)
       .then(self => {
         const isSelf = self._id.equals(profile._id)
@@ -34,8 +33,6 @@ function show(req, res) {
       })
     })
     .catch(err => console.log(err))
-    console.log(profile)
-    
   })
   .catch((err) => console.log(err))
 }
@@ -43,9 +40,13 @@ function show(req, res) {
 function addFavArtist(req, res) {
   Profile.findById(req.user.profile._id)
   .then(profile =>  {
-    profile.favArtist.push(req.body)
-    profile.save()
-    .then(() => res.redirect(`/profiles/${req.user.profile._id}`))
+    Artist.find({bandName: req.body.favArtist})
+      .then(result => {
+        console.log(result)
+        profile.favArtist.push(result[0]._id)
+        profile.save()
+        .then(() => res.redirect(`/profiles/${req.user.profile._id}`))
+      })
   })
 }
 

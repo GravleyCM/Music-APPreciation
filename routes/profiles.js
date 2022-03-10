@@ -6,7 +6,7 @@ const router = Router()
 
 router.get("/", isLoggedIn, profilesCtrl.index)
 router.get("/:id", profilesCtrl.show)
-router.post("/:id/artists", profilesCtrl.addFavArtist)
+router.post("/:id", profilesCtrl.addFavArtist)
 
 export {
   router

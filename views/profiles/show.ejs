@@ -12,12 +12,12 @@
 
       <form action="/profiles/<%= profile._id %>" method="POST">
         <label>Favorite Artist
-          <select>
+          <select name="favArtist">
             <% artists.forEach(art => { %>
-              <option value="<%= artist._id %>">
+              <option value="<%= art.bandName %>">
                 <%= art.bandName %>
               </option> 
-           <% }) %>
+          <% }) %>
           </select>
         </label>
         <button>Add Favorite Artist</button>
