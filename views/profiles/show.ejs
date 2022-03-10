@@ -9,15 +9,15 @@
 
     <% if (isSelf) { %>
       <h2>Add Your favorite Artist</h2>
-    
-        <ul>
-          <%- profile.favArtist.map(fa => `<li>${fa.bandName}</li>`).join("") %> 
-        </ul>
 
       <form action="/profiles/<%= profile._id %>" method="POST">
         <label>Favorite Artist
           <select>
-            <%= artists.forEach(art => `<option value="${art._id}">${art.bandName}</option>`) %>
+            <% artists.forEach(art => { %>
+              <option value="<%= artist._id %>">
+                <%= art.bandName %>
+              </option> 
+           <% }) %>
           </select>
         </label>
         <button>Add Favorite Artist</button>
