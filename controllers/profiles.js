@@ -11,7 +11,6 @@ function index(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.render(err)
   })
 }
 

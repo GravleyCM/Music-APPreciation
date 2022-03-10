@@ -6,6 +6,7 @@
     <img src="<%= profile.avatar %>" alt="<%= profile.avatar %>'s avatar">
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
+
     <% if (isSelf) { %>
       <h2>Add Your favorite Artist</h2>
     
@@ -13,7 +14,7 @@
           <%- profile.favArtist.map(fa => `<li>${fa.bandName}</li>`).join("") %> 
         </ul>
 
-      <form action="/profiles/<%= profile._id %>/favartist" method="POST">
+      <form action="/profiles/<%= profile._id %>" method="POST">
         <label>Favorite Artist
           <select>
             <%- profile.favArtist.map(art => `<option value="${art._id}">${art.bandName}</option>`).join("") %>
