@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
+<main>
   <h1>Edit Artist</h1>
   <form action="/artists/<%= artist._id %>?_method=PUT" method="POST">
     <label>
@@ -14,6 +14,6 @@
     </label>
     <button type="submit">Edit Artist</button>
   </form>
-</section>
+</main>
 
 <%- include('../partials/footer') %>

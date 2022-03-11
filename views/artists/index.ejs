@@ -1,7 +1,7 @@
 <%- include("../partials/html-head") %>
 <%- include("../partials/nav") %>
 
-<section>
+<main>
   <h1>All Artists</h1>
   <% if(user) { %>
     <form action="/artists" method="POST">
@@ -20,7 +20,7 @@
     </li>
   <% }) %>
   </ul>
-</section>
+</main>
 
 
 <%- include("../partials/footer") %> 

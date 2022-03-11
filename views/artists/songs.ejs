@@ -1,24 +1,17 @@
 <%- include("../partials/html-head") %> 
 <%- include("../partials/nav") %> 
 
-<h1>Song List</h1>
-
-<% if(user) { %>
-  <h2>Add A Song</h2>
-  <form action="/songs" method="POST">
-    <label>
-      <input type="text" name="songTitle" placeholder="Song Title">
-    </label>
-    <button type="submit">Add Song</button>
-  </form>
-<% } %>
-
-<!-- <%# songs.forEach(song => { %>
-  <li>
-    <%# song.songTitle %>
-<%# }) %>
-</ul> -->
-
-</section>
+<main>
+  <h1>Song List</h1>
+  <% if(user) { %>
+    <h2>Add A Song</h2>
+    <form action="/songs" method="POST">
+      <label>
+        <input type="text" name="songTitle" placeholder="Song Title">
+      </label>
+      <button type="submit">Add Song</button>
+    </form>
+  <% } %>
+</main>
 
 <%- include("../partials/footer") %>
