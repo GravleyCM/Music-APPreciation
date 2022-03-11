@@ -7,10 +7,10 @@
   <a href="/artists">Artists</a>
   <a href="/profiles">Profiles</a>
   <% if (user) { %>
-    <a class="log-btn" href="/auth/logout">Logout</a>
+    <a href="/auth/logout">Logout</a>
   <% } else { %>
     <a href="/auth/google" class="siwg-link">
-      <button class="log-btn" type="submit" class="siwg">
+      <button type="submit" class="siwg">
         <img id="siwg-image" alt="Sign in with Google" />
       </button>
     </a>
