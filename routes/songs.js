@@ -6,10 +6,6 @@ const router = Router()
 
 router.get("/", songsCtrl.index)
 router.post("/", isLoggedIn, songsCtrl.createSong)
-// router.post("/", isLoggedIn, songsCtrl.addSong)
-
-
-
 
 export {
   router

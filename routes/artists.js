@@ -2,8 +2,6 @@ import { Router } from "express"
 import * as artistsCtrl from "../controllers/artists.js"
 import { isLoggedIn } from "../middleware/middleware.js"
 
-
-
 const router = Router()
 
 router.get("/", artistsCtrl.index)
@@ -15,11 +13,6 @@ router.get("/:id/album/:id", artistsCtrl.showSongs)
 router.post("/:id/songs", artistsCtrl.addSong)
 router.get("/:id/edit", isLoggedIn, artistsCtrl.edit)
 router.put("/:id", isLoggedIn, artistsCtrl.update)
-
-
-
-
-
 
 export {
   router
