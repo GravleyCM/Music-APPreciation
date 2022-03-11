@@ -3,7 +3,7 @@
 
 <main class="profile-pics">
       <% profiles.forEach(profile => { %>
-          <a class="text-decoration-none" href="/profiles/<%= profile._id %>">
+          <a href="/profiles/<%= profile._id %>">
               <% if (profile.avatar) { %>
                 <img
                   src="<%= profile.avatar %>"
@@ -15,7 +15,7 @@
                   alt="A placeholder avatar"
                 />
               <% } %>
-                <p class="card-title fs-3 text-dark"><%= profile.name %></p>
+                <p><%= profile.name %></p>
           </a>
       <% }) %>
 </main>
