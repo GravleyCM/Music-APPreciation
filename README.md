@@ -4,10 +4,12 @@
 Music APPreciation is an app where users can add musical artists, albums, and songs to share with eachother. Users will be able to have a personal profile so they can have favorite artists and show off their own personal music tastes.
 
 ### Getting Started
-(Link to deployed site will go here)
+[Link to deployed app on Heroku](https://music-appreciation.herokuapp.com/)
 
 
 ## Screenshots
+![Latest view](public/assets/Screen%20Shot%202022-03-10%20at%2010.30.27%20PM.png)
+
 ![Initial wireframe](public/assets/Screen%20Shot%202022-03-03%20at%209.41.13%20PM.png)
 
 ![Inital ERD](public/assets/Screen%20Shot%202022-03-04%20at%2011.06.12%20AM.png)
@@ -17,12 +19,12 @@ Music APPreciation is an app where users can add musical artists, albums, and so
 ![Artist View](public/assets/Artist%20View.png)
 
 ## Technologies Used
-* Node.js
+* NodeJS
+* ExpressJS
 * MongoDB
 * Mongoose
 * Google OAuth
-* PassportJs
-* Bootstrap v5.1.3
+* PassportJS
 
 
 ## Next Steps 
