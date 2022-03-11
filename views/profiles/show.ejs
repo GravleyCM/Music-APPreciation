@@ -6,17 +6,14 @@
     <img src="<%= profile.avatar %>" alt="<%= profile.avatar %>'s avatar">
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
-
     <% if (isSelf) { %>
       <% if (profile.favArtist.length) { %>
-
         <h2>
           <%= profile.name %>'s favorite artist is 
           <%= profile.favArtist[0].bandName %>
         </h2>
       <% } else { %>  
       <h2>Add Your favorite Artist</h2>
-
       <form action="/profiles/<%= profile._id %>" method="POST">
         <label>Favorite Artist
           <select name="favArtist">
@@ -30,10 +27,7 @@
         <button>Add Favorite Artist</button>
       </form>
       <% } %>
-    <% } %> 
-
-    
-
+    <% } %>
 </main>
 
 
