@@ -3,7 +3,10 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const songSchema = new Schema ({
-  songTitle: String,
+  songTitle: {
+    type: String,
+    required: true,
+  },
 }, {
   timestamps: true
 })
