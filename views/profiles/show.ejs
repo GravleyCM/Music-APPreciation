@@ -9,7 +9,11 @@
 
     <% if (isSelf) { %>
       <% if (profile.favArtist.length) { %>
-        <%= profile.favArtist[0].bandName %>
+
+        <h2>
+          <%= profile.name %>'s favorite artist is 
+          <%= profile.favArtist[0].bandName %>
+        </h2>
       <% } else { %>  
       <h2>Add Your favorite Artist</h2>
 

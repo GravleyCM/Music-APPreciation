@@ -3,22 +3,20 @@
 
 <main>
   <h1><%= artist.bandName %></h1>
-  <p>
+  <h2>
     <%= artist.bandName %> plays <%= artist.genre %> music!
-  </p>
-
+  </h2>
   <% if (artist.owner.equals(user?.profile._id)) { %>
     <form action="/artists/<%= artist._id %>/edit" method="GET">
       <button class="btn" type="submit">Edit this Artist</button>
     </form>
   <% } %>
-  
+  <br />
   <% if (artist.owner.equals(user?.profile._id)) { %> 
   <form action="/artists/<%= artist.id %>?_method=DELETE" method="POST">
     <button>Delete Artist</button>
   </form>
-  <% } %> 
-
+  <% } %>
   <% if(user) { %>
     <h2>Add An Album</h2>
     <form action="/artists/<%= artist._id %>/albums" method="POST">
@@ -28,14 +26,13 @@
       <button type="submit">Add Album</button>
     </form>
   <% } %>
-
-
+  <br />
+  <h2>Album List</h2>
     <% artist.albums.forEach(album => { %>
-      <h3>
+      <h3 class="album-list">
         <a href="/artists/<%= artist._id %>/album/<%= album._id %>"><%= album.albumName %></a>
       </h3>
     <% }) %>
-
-    </main>
+</main>
 
 <%- include("../partials/footer") %>

@@ -30,11 +30,12 @@ body {
 }
 
 nav {
-  /* color: black !important; */
   background-color: red;
   font-size: 1.6rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin-bottom: 15px;
 }
 
 main {
@@ -43,7 +44,6 @@ main {
   justify-content: center;
   flex-direction: column;
   max-width: 40rem;
-  border: 1px solid red;
   margin-left: 40px;
 }
 
@@ -55,11 +55,37 @@ ul {
   list-style: none;
 }
 
+li {
+  margin: 3px;
+}
+
 a {
   color: red;
   margin: 0 5px;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 nav a {
   color: black;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.album-list {
+  margin: 5px;
+}
+
+.profile-pics {
+  margin: auto;
+}
+
+button {
+  background-color: red;
+  color: white;
+  border-radius: 10%;
 }
